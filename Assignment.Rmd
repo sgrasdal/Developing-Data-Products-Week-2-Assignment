@@ -1,0 +1,44 @@
+---
+title: "Developing Data Products Week 2 Assignment"
+author: "Simon Grasdal"
+date: "2025-01-04"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+
+```
+
+# Overview
+Create a web page using R Markdown that features a map created with Leaflet. 
+
+Host your webpage on either GitHub Pages, RPubs, or NeoCities.
+
+Your webpage must contain the date that you created the document, and 
+it must contain a map created with Leaflet. We would love to see you 
+show off your creativity! 
+
+# Code
+This is a map of all the University athletics centers of participating 
+Universities at the Ontario University Athletics Rowing Championships.
+``` {r}
+Centres <- data.frame(
+        lat = c(44.353465,43.118263,45.5101457,43.2639397,
+                46.3432694,43.9445322,44.2290438,44.2381073,43.533916,45.4196573,
+                43.6627831,43.4656892,43.0189254,45.3858581),
+        lng = c(-78.297777,-79.240137,-73.5812908,-79.9178252,-79.4916705,
+                -78.8964374,-76.4949417,-76.4686244,-80.222941,-75.6775912,
+                -79.4010326,-80.5423102,-81.2786109,-75.6950041), 
+        name = c("Trent University", "Brock University", "McGill University",
+                 "McMaster University", "Nipissing University", "Ontario Tech 
+                 University", "Queens University", "Royal Military College", 
+                 "University of Guelph", "University of Ottawa", "University of 
+                 Toronto", "University of Waterloo", "Western University", 
+                 "Carlton University" ))
+my_map<-Centres %>% leaflet() %>% addTiles() %>% addMarkers(popup = Centres$name,
+        clusterOptions = markerClusterOptions())
+my_map
+
+```
