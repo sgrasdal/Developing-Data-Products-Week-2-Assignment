@@ -1,4 +1,4 @@
-# Developing-Data-Products-Week-2-Assignment
+# Developing-Data-Products-Assignment-Week-2
 Assignment for the Developing Data Products assignment for week 2
 
 
@@ -15,3 +15,7 @@ The rubric contains the following two questions:
 1.  Does the web page feature a date and is this date less than two months before the date that you're grading this assignment?
    
 2.  Does the web page feature an interactive map that appears to have been created with Leaflet?
+
+# Submission
+The following link is the published version of this assignment with the interactive map
+https://rpubs.com/simon_grasdal/Developing_Data_Products_Assignment_Week2
